@@ -341,16 +341,16 @@ td{
     margin: auto;
    }
    .footer-right{
-    width: 60%;
-    float: left;
-    margin-left: -200px;
    
+    float: right;
+    width: 55%;
+    margin-right: -93px;
     
    }
    .footer-left{
-    float: right;
-    width: 40%;
-    margin-right: -60px;
+    width: 60%;
+    float: left;
+    margin-left: -164px;
   
 
    }
