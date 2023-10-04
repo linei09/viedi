@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 20px;
+        }
+
+        .input-row {
+            margin-bottom: 10px;
+            float: left;
+        }
+
+        .input-container {
+            margin: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .titel-container{
+            margin: 10px 0;
+            display: flex;
+            align-items: center; 
+    
+        }
+
+        .description-container {
+            width: 1000px;
+            height: 100px;
+            font-size: 18px;
+            font-weight: 800;
+            outline: navy;
+            padding: 10px;
+            border: 3px solid #ccc;
+            border-radius: 10px;
+            flex-direction: column;
+            box-sizing: border-box;
+            display: flex;
+        
+        }
+
+        .description-container input {
+            font-size: 18px;
+            font-weight: 800;
+            outline: none;
+            padding: 10px;
+            border: none;
+        }
+        
+        .input-container select[name=place],
+        .input-container input[type=date],
+        .input-container input[type=number],
+        .input-container input[type=text] {
+            width: 100%;
+            max-width: 400px;
+            height: 50px;
+            font-size: 18px;
+            font-weight: 800;
+            outline: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #Review-Titel {
+            max-width: 400px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: 800;
+            flex-direction: column;
+            outline: none;
+            padding: 10px;
+            border: 3px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .reivew-content {
+            width: 1000px;
+            height: 500px;
+            font-size: 18px;
+            font-weight: 800;
+            outline: navy;
+            padding: 20px;
+            margin: 10px;
+            border: 3px solid #ccc;
+            border-radius: 10px;
+            flex-direction: column;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .reivew-content input[type="text"] {
+            font-size: 18px;
+            font-weight: 800;
+            outline: none;
+            padding: 10px;
+            border: none;
+        }
+
+        .submit-container{
+            width: 100%;
+            height: 50px;
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: 0;
+            padding: 5px;
+            background-color: LightGoldenrodYellow;
+            border: 2px solid #F61110;;
+            justify-content: center; 
+            display: flex;
+        }
+        button{
+            height: 35px;
+            padding: 10px 20px; 
+            margin-right: 10px;
+            border: none ;
+            border-radius: 5px;
+            font-size: larger ;
+            color:#333;
+        }
+        button:hover{
+            background-color: gray;
+            box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+        }
+/*////////////*/
+        .navbar {
+            background-color: #ffffff;
+            overflow: hidden;
+            position: relative; /* Để căn chỉnh phần tử con */
+            border: 2px solid Tomato;
+        }
+        
+        .logo {
+            float: left;
+            padding: 10px;
+        }
+        
+        .logo img {
+            max-height: 50px; /* Điều chỉnh kích thước logo theo ý muốn */
+            /*vertical-align: middle; /* Căn giữa logo theo chiều dọc */
+            margin-right: 0px; /* Khoảng cách giữa logo và chữ VieDi */
+            padding: 8px 12px;
+            border: 2px solid Tomato;
+            float: left;
+        }
+        
+        .logo a {
+            color: rgb(216, 23, 23);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 8px 12px;
+            margin: 0;
+        }
+        
+        .search-bar {
+            float: left; /* Đưa thanh tìm kiếm sang trước */
+            padding: 0px;
+            margin: 0;
+        }
+        .search-button {
+            background-color: #d61515;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .search-button i {
+            font-family: 'Font Awesome 6 Free';
+        }
+        
+        .search-button:hover {
+            background-color: #555;
+        }
+        
+        .user-actions {
+            float: right;
+            top: 10px; /* Khoảng cách từ trên xuống */
+            right: 10px; /* Khoảng cách từ bên phải */
+        }
+        
+        .user-button {
+            background-color: #9b2323;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .user-button i {
+            font-family: 'Font Awesome 6 Free';
+        }
+        
+        .user-button:hover {
+            background-color: #000000;
+        }
+        
+        ul.menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: right; /* Đưa menu sang sau thanh tìm kiếm */
+            font-weight: bold;
+        }
+        
+        ul.menu li {
+            float: left;
+        }
+        
+        ul.menu li a {
+            display: block;
+            color: rgb(194, 25, 25);
+            text-align: center;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        ul.menu li a:hover {
+            background-color: #555;
+        }
+        .img-QA {
+        position: relative;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="home.html"> <!--chỗ này thì để cái link của trang chủ -->
+                <img src="https://cdn.glitch.global/e08971eb-0b71-4281-9445-ca10502cb7d6/Logo.png?v=1696344554829" alt="Logo VieDi">
+                VieDi.com
+            </a>
+        </div>
+        
+        <div class="user-actions">
+            <button class="user-button"><i class="fas fa-user-circle"></i> </button>
+        </div>
+
+        <div class="search-bar">
+            <form>
+                <input type="text" placeholder="Tìm kiếm...">
+                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        
+      `
+      
+        <ul class="menu">
+            <li><a href="#">Điểm đến</a></li>
+            <li><a href="#">Viết bài</a></li>
+            <li><a href="#">Thông báo</a></li>
+            <li><a href="#">Ngôn ngữ</a></li>
+        </ul>
+        
+      
+    </div>
+    
+    <div class="center-container">
+        <div class="titel-container">
+            <input type="text" id="Review-Titel" name="Titel" placeholder="Titel">
+        </div>
+    </div>
+
+    <div class="center-container">
+        <div class="description-container">
+            <input type="text" id="description" name="description" placeholder="description">
+        </div>
+    </div>
+
+    <div class="center-container">
+       
+            <div class="input-container">
+                <select name="place" id="place">
+                    <option value="" disabled selected>Destination</option>
+                    <option value="An Giang">An Giang</option>
+                    <option value="Ben Tre">Ben Tre</option>
+                    <option value="Binh Dinh">Binh Dinh</option>
+                    <option value="Binh Phuoc">Binh Phuoc</option>
+                    <option value="Binh Duong">Binh Duong</option>
+                    <option value="Binh Thuan">Binh Thuan</option>
+                    <option value="Bac Ninh">Bac Ninh</option>
+                    <option value="Bac Lieu">Bac Lieu</option>
+                    <option value="Bac Kan">Bac Kan</option>
+                    <option value="Bac Giang">Bac Giang</option>
+                    <option value="Ba Ria Vung Tau">Ba Ria Vung Tau</option>
+                    <option value="Ca Mau">Ca Mau</option>
+                    <option value="Can Tho">Can Tho</option>
+                    <option value="Cao Bang">Cao Bang</option>
+                    <option value="Dong Nai">Dong Nai</option>
+                    <option value="Dien Bien">Dien Bien</option>
+                    <option value="Dak Nong">Dak Nong</option>
+                    <option value="Dak Lak">Dak Lak</option>
+                    <option value="Da Nang">Da Nang</option>
+                    <option value="Dong Thap">Dong Thap</option>
+                    <option value="Gia Lai">Gia Lai</option>
+                    <option value="Hai Phong">Hai Phong</option>
+                    <option value="Hau Giang">Hau Giang</option>
+                    <option value="Ho Chi Minh">Ho Chi Minh</option>
+                    <option value="Hoa Binh">Hoa Binh</option>
+                    <option value="Hung Yen">Hung Yen</option>
+                    <option value="Ha Giang">Ha Giang</option>
+                    <option value="Ha Nam">Ha Nam</option>
+                    <option value="Hai Duong">Hai Duong</option>
+                    <option value="Ha Noi">Ha Noi</option>
+                    <option value="Ha Tinh">Ha Tinh</option>
+                    <option value="Khanh Hoa">Khanh Hoa</option>
+                    <option value="Kien Giang">Kien Giang</option>
+                    <option value="Kon Tum">Kon Tum</option>
+                    <option value="Lao Cai">Lao Cai</option>
+                    <option value="Lai Chau">Lai Chau</option>
+                    <option value="Lam Dong">Lam Dong</option>
+                    <option value="Lang Son">Lang Son</option>
+                    <option value="Long An">Long An</option>
+                    <option value="Ninh Binh">Ninh Binh</option>
+                    <option value="Ninh Thuan">Ninh Thuan</option>
+                    <option value="Nghe An">Nghe An</option>
+                    <option value="Nam Dinh">Nam Dinh</option>
+                    <option value="Phu Tho">Phu Tho</option>
+                    <option value="Phu Yen">Phu Yen</option>
+                    <option value="Quang Ngai">Quang Ngai</option>
+                    <option value="Quang Binh">Quang Binh</option>
+                    <option value="Quang Nam">Quang Nam</option>
+                    <option value="Quang Ninh">Quang Ninh</option>
+                    <option value="Quang Tri">Quang Tri</option>
+                    <option value="Soc Trang">Soc Trang</option>
+                    <option value="Son La">Son La</option>
+                    <option value="Tay Ninh">Tay Ninh</option>
+                    <option value="Thanh Hoa">Thanh Hoa</option>
+                    <option value="Thai Binh">Thai Binh</option>
+                    <option value="Tuyen Quang">Tuyen Quang</option>
+                    <option value="Tra Vinh">Tra Vinh</option>
+                    <option value="Tien Giang">Tien Giang</option>
+                    <option value="Thua Thien Hue">Thua Thien Hue</option>
+                    <option value="Thai Nguyen">Thai Nguyen</option>
+                    <option value="Vinh Phuc">Vinh Phuc</option>
+                    <option value="Vinh Long">Vinh Long</option>
+                    <option value="Yen Bai">Yen Bai</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <input type="date" id="start_date" name="date">
+            </div>
+            <div class="input-container">
+                <input type="number" id="trip-days" name="trip-days" placeholder="Total Days">
+            </div>
+            <div class="input-container">
+                <input type="text" id="Tags" name="Tags" placeholder="Search for Tags">
+            </div>
+        </div>
+    </div>
+
+    <div class="center-container">
+        <div class="reivew-content">
+            <input type="text" id="reivew-content" name="content" placeholder="Write your Review of the destination">
+        </div>
+    </div>
+    <div class="center-container">
+        <dix class ="submit-container">
+            <button style="background-color: burlywood;" >Đăng Bài</button>
+            <button>Lưu Nháp </button>
+        </dix>
+    <div>
+
+</body>
+
+</html>
+
+

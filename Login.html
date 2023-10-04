@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <style>
+      *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+      }
+      body{
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .container{
+        display: flex;
+        flex-direction:column;
+        width: 300px;
+        padding: 15px;
+        border: 1px solid 
+        skyblue;
+        background-color: bisque;
+        border-radius: 5px;
+        
+      }
+      input{
+        margin: 5px 0px;
+        height: 35px;
+        padding: 7px;
+      }
+      button{
+        height: 35px;
+        margin: 5px 0px;
+        background-color: red;
+        border: none ;
+        border-radius: 5px;
+        font-size: larger ;
+        color:#333;
+      }
+      button:hover{
+        background-color: #333;
+        color: skyblue;
+      }
+      .logo-container {
+            display: flex;
+            justify-content: center; 
+           margin-bottom: -125px;
+           margin-top: -80px;
+        }
+      .logo {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px; 
+        width: 500px;
+        height: 350px; 
+      }
+      .links-container {
+            display: flex;
+            justify-content: space-between; 
+            margin-top: 10px; 
+        }
+      .link{
+        margin-top: -30px;
+      }
+      
+  
+    </style>
+  </head>
+  <body>
+    <div class="container"> 
+      <div class="logo-container">
+        <img class="logo" src="C:\Users\Cao Minh Duc\Desktop\HK1 2024\web\logo.png" alt="Logo Image">
+      </div>
+        <input type="email"
+        placeholder="email">
+        <input type="password"  id="myInput"
+        placeholder="password"><br><br>
+        <div class="links-container">
+          <div class="link">
+              <a href="#">Forgot Password?</a>
+          </div>
+          <div class="link">
+              <a href="#">Create an Account</a>
+          </div>
+      </div>
+        <input type="checkbox"  style="width: 15px; height:15px; margin-right: 10px;"  onclick="myFunction()">show password
+        <button>Login</button>
+
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+      </script>
+  </body>
+  </html>
