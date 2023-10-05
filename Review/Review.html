@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+    <link rel="stylesheet" href="Review.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+
+<body>
+    <header class="header">   
+        <nav class="header-navbar">
+            <ul class="header-list">
+                <li class="header-item">
+                    <div class="logo">
+                        <a href=""><img src="logo2.png" class="logo-menu logo" style="height: 45px;width: 60px;margin-top: 12px;"></a>
+                        <a href="" style="margin-top:25px;margin-left:-10px;">VIEDI</a>
+                    </div>
+                </li>
+                <li class="header-item">
+                    <div >
+                        <input class="search-input" type="text" >
+                        <button class="search-btn" >
+                            <i class="fas fa-search"></i></i>
+                        </button>
+                    </div>
+                </li>
+                <li class="header-item">
+                    <div class="menu-right">
+                        <a class="menu-right-item" href="" >Điểm đến</a>
+                        <a class="menu-right-item" href="" >Hỏi đáp</a>
+                        <a class="menu-right-item" href="">Ngôn ngữ</a>
+                        <a class="menu-right-item" href="">
+                            <i class="fas fa-bell"></i>
+                        </a>
+                        <a class="menu-right-item" href="">
+                            <i class="fas fa-user" ></i>
+                        </a>
+                    </div>
+            </ul>
+        </nav> 
+    </header>
+    
+    <div class="center-container">
+        <div class="titel-container">
+            <input type="text" id="Review-Titel" name="Titel" placeholder="Titel">
+        </div>
+    </div>
+
+    <div class="center-container">
+        <div class="description-container">
+            <input type="text" id="description" name="description" placeholder="description">
+        </div>
+    </div>
+
+    <div class="center-container">
+       
+            <div class="input-container">
+                <select name="place" id="place">
+                    <option value="" disabled selected>Destination</option>
+                    <option value="An Giang">An Giang</option>
+                    <option value="Ben Tre">Ben Tre</option>
+                    <option value="Binh Dinh">Binh Dinh</option>
+                    <option value="Binh Phuoc">Binh Phuoc</option>
+                    <option value="Binh Duong">Binh Duong</option>
+                    <option value="Binh Thuan">Binh Thuan</option>
+                    <option value="Bac Ninh">Bac Ninh</option>
+                    <option value="Bac Lieu">Bac Lieu</option>
+                    <option value="Bac Kan">Bac Kan</option>
+                    <option value="Bac Giang">Bac Giang</option>
+                    <option value="Ba Ria Vung Tau">Ba Ria Vung Tau</option>
+                    <option value="Ca Mau">Ca Mau</option>
+                    <option value="Can Tho">Can Tho</option>
+                    <option value="Cao Bang">Cao Bang</option>
+                    <option value="Dong Nai">Dong Nai</option>
+                    <option value="Dien Bien">Dien Bien</option>
+                    <option value="Dak Nong">Dak Nong</option>
+                    <option value="Dak Lak">Dak Lak</option>
+                    <option value="Da Nang">Da Nang</option>
+                    <option value="Dong Thap">Dong Thap</option>
+                    <option value="Gia Lai">Gia Lai</option>
+                    <option value="Hai Phong">Hai Phong</option>
+                    <option value="Hau Giang">Hau Giang</option>
+                    <option value="Ho Chi Minh">Ho Chi Minh</option>
+                    <option value="Hoa Binh">Hoa Binh</option>
+                    <option value="Hung Yen">Hung Yen</option>
+                    <option value="Ha Giang">Ha Giang</option>
+                    <option value="Ha Nam">Ha Nam</option>
+                    <option value="Hai Duong">Hai Duong</option>
+                    <option value="Ha Noi">Ha Noi</option>
+                    <option value="Ha Tinh">Ha Tinh</option>
+                    <option value="Khanh Hoa">Khanh Hoa</option>
+                    <option value="Kien Giang">Kien Giang</option>
+                    <option value="Kon Tum">Kon Tum</option>
+                    <option value="Lao Cai">Lao Cai</option>
+                    <option value="Lai Chau">Lai Chau</option>
+                    <option value="Lam Dong">Lam Dong</option>
+                    <option value="Lang Son">Lang Son</option>
+                    <option value="Long An">Long An</option>
+                    <option value="Ninh Binh">Ninh Binh</option>
+                    <option value="Ninh Thuan">Ninh Thuan</option>
+                    <option value="Nghe An">Nghe An</option>
+                    <option value="Nam Dinh">Nam Dinh</option>
+                    <option value="Phu Tho">Phu Tho</option>
+                    <option value="Phu Yen">Phu Yen</option>
+                    <option value="Quang Ngai">Quang Ngai</option>
+                    <option value="Quang Binh">Quang Binh</option>
+                    <option value="Quang Nam">Quang Nam</option>
+                    <option value="Quang Ninh">Quang Ninh</option>
+                    <option value="Quang Tri">Quang Tri</option>
+                    <option value="Soc Trang">Soc Trang</option>
+                    <option value="Son La">Son La</option>
+                    <option value="Tay Ninh">Tay Ninh</option>
+                    <option value="Thanh Hoa">Thanh Hoa</option>
+                    <option value="Thai Binh">Thai Binh</option>
+                    <option value="Tuyen Quang">Tuyen Quang</option>
+                    <option value="Tra Vinh">Tra Vinh</option>
+                    <option value="Tien Giang">Tien Giang</option>
+                    <option value="Thua Thien Hue">Thua Thien Hue</option>
+                    <option value="Thai Nguyen">Thai Nguyen</option>
+                    <option value="Vinh Phuc">Vinh Phuc</option>
+                    <option value="Vinh Long">Vinh Long</option>
+                    <option value="Yen Bai">Yen Bai</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <input type="date" id="start_date" name="date">
+            </div>
+            <div class="input-container">
+                <input type="number" id="trip-days" name="trip-days" placeholder="Total Days">
+            </div>
+            <div class="input-container">
+                <input type="text" id="Tags" name="Tags" placeholder="Search for Tags">
+            </div>
+        </div>
+    </div>
+
+    <div class="center-container">
+        <div class="reivew-content">
+            <input type="text" id="reivew-content" name="content" placeholder="Write your Review of the destination">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="center">
+            <div class="footer-left">
+                <h3>Mạng xã hội du lịch Việt Nam</h3>
+                <ul class="icon-footer">
+                    <li class="nav-item"><a href=""> <i class="fab fa-facebook" style="color:black;font-size: 30px;margin-right: 10px;"></i> </a></li>
+                    <li class="nav-item"><a href=""></a><i class="fab fa-instagram" style="color: black;font-size: 30px;margin-left: 10px;"></i></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3 style="margin-left: 30px;margin-bottom: -10px;">VỀ VIEDI</h3>
+                <ul class="content">
+                    <li class="text-footer"><a href="">Giới thiệu</a></li>
+                    <li class="text-footer"><a href="">Liên hệ</a></li>
+                    <li class="text-footer"><a href="">Chính sách sử dụng</a></li>
+                    <li class="text-footer"><a href="">Chính sách bảo mật</a></li>
+                    <li class="text-footer"><a href="">Chính sách quyền riêng tư</a></li>
+                </ul>
+            </div>
+        
+        </div>
+    </footer>
+
+
+    
+    <dix class ="submit-container">
+        <button style="background-color: burlywood;" >Đăng Bài</button>
+        <button>Lưu Nháp </button>
+    </dix>
+    
+    
+   
+
+</body>
+
+</html>
+
+
