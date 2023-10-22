@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;                }                        
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;                 
+}
+.wrapper {
+    width: 430px;
+    padding: 30px;
+    background: #fff; /* Đặt màu nền của .wrapper thành trắng */
+    color: #000; /* Đặt màu chữ trong .wrapper thành đen */
+    border-radius: 5px;
+}
+
+    .wrapper header{
+        color: #6990f2;
+        font-size: 27px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .wrapper form{
+        height: 167px;
+        display: flex;
+        margin: 30px 0; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 5px;
+        border: 2px dashed #6990f2;
+    }
+    form :where(i, p){
+        color: #6990f2;
+    }
+    form i{
+        font-size: 50px;
+    }
+    form p{
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    section .row{
+        background: #e9f0ff;
+        margin-bottom: 10px;    
+        list-style: none;
+        padding: 15px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    section .row i{
+        font-size: 30px;
+        color: #6990f2;
+    }
+    .progress-area .row .content{
+        width: 100%;
+        margin-left: 15px;
+    }
+    section .detail span{
+        font-size: 14px;
+    }
+    progress-area .row .content{
+        width: 100%;
+        margin-left: 15px;
+    }
+    progress-area .row .detail{
+        align-items: flex-start;
+        display: flex;
+        margin-bottom: 7px;                       
+        justify-content: center;
+    }
+    progress-area .progress-bar{
+        height: 6px;
+        width: 100%;
+        background: #fff;
+        margin-bottom: 4px;
+        border-radius: 30px;
+
+    }
+    .progress-bar .progress{
+        height: 100%;
+        width: 50%;
+        background: #6990f2;
+        border-radius: inherit;
+    }
+    .uploaded-area{
+        max-height: 230px;
+        overflow-y: scroll;
+    }
+    .uploaded-area::-webkit-scrollbar{
+        width: 0px;
+    }
+
+    .uploaded-area .row .content{
+        display: flex;
+        align-items: center;
+
+    }
+
+    .uploaded-area .row .detail{
+        display: flex;  
+        margin-left: 15px;
+        flex-direction: column;
+    }
+    .uploaded-area .detail .size{
+        font-size: 11px;
+        color: #404040;
+    }
+    .uploaded-area .fa-check{
+        color: #6990f2;
+        font-size: 16px;
+    }
+    *{
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
+    }                        
+    body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;                 
+    }
+    .wrapper {
+        width: 430px;
+        padding: 30px;
+        background: #f2f2f2; /* Change background color to a light gray */
+        border-radius: 5px;
+    }
+    
+    .wrapper header {
+        color: #ff5733; /* Change text color to a reddish color */
+        font-size: 27px;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .wrapper form {
+        height: 167px;
+        display: flex;
+        margin: 30px 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 5px;
+        border: 2px dashed #ff5733; /* Change border color to match the text color */
+        cursor: pointer;
+    }
+    
+    form:where(i, p) {
+        color: #ff5733; /* Change text color to a reddish color */
+    }
+    
+    form i {
+        font-size: 50px;
+    }
+    
+    form p {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    
+    section .row {
+        background: #e9f0ff;
+        margin-bottom: 10px;
+        list-style: none;
+        padding: 15px 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    section .row i {
+        font-size: 30px;
+        color: #ff5733; /* Change the icon color to the same reddish color */
+    }
+    
+    .progress-area .row .content {
+        width: 100%;
+        margin-left: 15px;
+    }
+    
+    section .detail span {
+        font-size: 14px;
+    }
+    
+    .progress-area .row .content {
+        width: 100%;
+        margin-left: 15px;
+    }
+    
+    .progress-area .row .detail {
+        align-items: flex-start;
+        display: flex;
+        margin-bottom: 7px;
+        justify-content: center;
+    }
+    
+    .progress-area .progress-bar {
+        height: 6px;
+        width: 100%;
+        background: #ff5733; /* Change the progress bar color to the same reddish color */
+        margin-bottom: 4px;
+        border-radius: 30px;
+    }
+    
+                    .progress-bar .progress{
+                        height: 100%;
+                        width: 50%;
+                        background: #6990f2;
+                        border-radius: inherit;
+                    }
+                    .uploaded-area{
+                        max-height: 230px;
+                        overflow-y: scroll;
+                    }
+                    .uploaded-area::-webkit-scrollbar{
+                        width: 0px;
+                    }
+
+                    .uploaded-area .row .content{
+                        display: flex;
+                        align-items: center;
+
+                    }
+                
+                    .uploaded-area .row .detail{
+                        display: flex;  
+                        margin-left: 15px;
+                        flex-direction: column;
+                    }
+                    .uploaded-area .detail .size{
+                        font-size: 11px;
+                        color: #404040;
+                    }
+                    .uploaded-area .fa-check{
+                        color: #6990f2;
+                        font-size: 16px;
+                    }
+                    .form-input{
+                        border: 1px solid #eee;
+                        border-radius: 4px;
+                        width: 100%;
+                        height: 50px;
+                        padding: 0 20px;
+                        transition: 0.25 ease;
+
+                    }
+
+                    .form-input:focus{
+                        border-color: #6a5af9;
+                    }
+
+                    .form-field {
+                        position: relative;
+                    }
+
+                    .form-label{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 21px;
+                        user-select: none;
+                        color: #999;
+                        pointer-events: none;
+                    }
+
+                    .form-input2{
+                        border: 1px solid #eee;
+                        border-radius: 4px;
+                        width: 100%;
+                        height: 100px;
+                        padding: 0 20px;
+                        transition: 0.25 ease;
+                        margin-top: 60px;
+                      
+                    }
+
+                    .form-input:focus2{
+                        border-color: #6a5af9;
+                    }
+
+                    .form-field2 {
+                        position: relative;
+                    }
+
+                    .form-label2{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 21px;
+                        user-select: none;
+                        color: #999;
+                        pointer-events: none;
+                    }
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        height: 25px;
+                    }
+            
+                    th, td {
+                        border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 8px;
+                        height: 25px;
+                    }
+            
+                    th {
+                        background-color: #f2f2f2;
+                    }
+                    
+                 
+                    
+                    
+
+                    
+                
+                    
+                
+                    
+
+
+                      
+                      
