@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VieDi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+<div class="main-bg bg-cover" style="background-image: url(https://www.bain.com/contentassets/47c92743d6fd4f8ca04387b088aafff1/vietnam-local-office-1950x650.jpg)">
+   
+    <div class="flex justify-center items-center min-h-screen p-6">
+        <div class="w-full max-w-md">
+            <div class="flex flex-col space-y-4">
+                <div class="bg-white text-center">
+                    <input type="radio" name="form-switch" id="login-form" class="hidden">
+                    <button type="button" class="bg-white text-green-500 font-semibold hover:bg-green-500 hover:text-white transition duration-300 py-3 px-4 w-full" onclick="document.getElementById('login-form').click()">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Login
+                    </button>
+                </div>
+                <div class="bg-white text-center">
+                    <input type="radio" name="form-switch" id="register-form" class="hidden">
+                    <button type="button" class="bg-white text-green-500 font-semibold hover:bg-green-500 hover:text-white transition duration-300 py-3 px-4 w-full" onclick="document.getElementById('register-form').click()">
+                        <i class="fas fa-pen mr-2"></i>Register
+                    </button>
+                </div>
+                <div class="bg-white text-center">
+                    <input type="radio" name="form-switch" id="forgot-password-form" class="hidden">
+                    <button type="button" class="bg-white text-green-500 font-semibold hover:bg-green-500 hover:text-white transition duration-300 py-3 px-4 w-full" onclick="document.getElementById('forgot-password-form').click()">
+                        <i class="fas fa-lock mr-2"></i>Forgot Password
+                    </button>
+                </div>
+                    <div class="flex justify-center mb-4 ">
+                        <div class="w-full">
+                            <form action="#" method="post" id="login-form-content" class=" bg-white hidden rounded p-4 ">
+                                <h3 class="text-2xl font-semibold text-center mb-4">Login Here</h3>
+                                <div class="mb-4">
+                                    <label for="username" class="block font-semibold">Username</label>
+                                    <div class="relative">
+                                        <i class="fas fa-user absolute top-3 left-3 text-gray-500"></i>
+                                        <input type="text" id="username" name="name" placeholder="Username" required class="py-2 px-4 pl-10 border bg-gray-200 rounded w-full">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="password" class="block font-semibold">Password</label>
+                                    <div class="relative">
+                                        <i class="fas fa-key absolute top-3 left-3 text-gray-500"></i>
+                                        <input type="password" id="password" name="password" placeholder="Password" required class="py-2 px-4 pl-10 border bg-gray-200 rounded w-full">
+                                    </div>
+                                </div>
+                                <button type="submit" class="bg-green-500 text-white font-semibold hover:opacity-75 transition py-3 px-4 w-full">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mb-4 ">
+                    <div class="w-full ">
+                        
+                            <form action="#" method="post" id="register-form-content" class="bg-white hidden rounded p-4 ">
+                                <h3 class="text-2xl font-semibold text-center mb-4">Register Here</h3>
+                                <div class="mb-4">
+                                    <label for="username" class="block font-semibold">Username</label>
+                                    <div class="relative">
+                                        <i class="fas fa-user absolute top-3 left-3 text-gray-500"></i>
+                                        <input type="text" id="username" name="name" placeholder="Username" required class="py-2 px-4 pl-10 border bg-gray-200 rounded w-full">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="block font-semibold">Email</label>
+                                    <div class="relative">
+                                        <i class="fas fa-envelope absolute top-3 left-3 text-gray-500"></i>
+                                        <input type="text" id="email" name="email" placeholder="Email" required class="py-2 px-4 pl-10 border bg-gray-200 rounded w-full">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="password" class="block font-semibold">Password</label>
+                                    <div class="relative">
+                                        <i class="fas fa-key absolute top-3 left-3 text-gray-500"></i>
+                                        <input type="password" id="password" name="password" placeholder="Password" required class="py-2 px-4 pl-10 border bg-gray-200 rounded w-full">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="confirmPassword" class="block font-semibold">Confirm Password</label>
+                                    <div class="relative">
+                                        <i class="fas fa-key absolute top-3 left-3 text-gray-500"></i>
+                                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required class="py-2 px-4 pl-10 border bg-gray-200 rounded w-full">
+                                    </div>
+                                </div>
+                                <button type="submit" class="bg-green-500 text-white font-semibold hover:opacity-75 transition py-3 px-4 w-full">Register</button>
+                            </form>
+                       
+                    </div>
+                </div>
+                <div class="flex justify-center mb-4 ">
+                    <div class=" w-full ">
+                        <form action="#" method="post" id="forgot-password-form-content" class="bg-white hidden rounded p-4 ">
+                            <h3 class="text-2xl font-semibold text-center mb-4">Forgot Password</h3>
+                            <p class="text-base text-gray-500 text-center mb-4">Enter your registered email.</p>
+                            <div class="mb-4">
+                                <label for="email" class="block font-semibold">Email</label>
+                                <div class="relative">
+                                    <i class="fas fa-envelope absolute top-3 left-3 text-gray-500"></i>
+                                    <input type="text" id="email" name="email" placeholder="Email" required class="py-2 px-4 pl-10 border bg-gray-200 rounded w-full">
+                                </div>
+                            </div>
+                            <button type="submit" class="bg-green-500 text-white font-semibold hover:opacity-75 transition py-3 px-4 w-full">Reset</button>
+                        </form>
+                    </div>
+                </div> 
+            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const loginForm = document.getElementById("login-form-content");
+    const registerForm = document.getElementById("register-form-content");
+    const forgotPasswordForm = document.getElementById("forgot-password-form-content");
+
+    document.getElementById("login-form").addEventListener("change", () => {
+        loginForm.classList.remove("hidden");
+        registerForm.classList.add("hidden");
+        forgotPasswordForm.classList.add("hidden");
+    });
+
+    document.getElementById("register-form").addEventListener("change", () => {
+        loginForm.classList.add("hidden");
+        registerForm.classList.remove("hidden");
+        forgotPasswordForm.classList.add("hidden");
+    });
+
+    document.getElementById("forgot-password-form").addEventListener("change", () => {
+        loginForm.classList.add("hidden");
+        registerForm.classList.add("hidden");
+        forgotPasswordForm.classList.remove("hidden");
+    });
+</script>
+
+</body>
+</html>
