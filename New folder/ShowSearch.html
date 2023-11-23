@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VieDi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="flex items-center justify-between p-4 bg-gray-900">
+            <div class="flex items-center">
+                <a href="" class="flex items-center">
+                    <img src="logo.png" class="h-12 w-16" alt="Logo">
+                    <span class="text-white text-lg ml-2 font-bold">VIEDI</span>
+                </a>
+                <div class="ml-4">
+                    <input class="p-2 border border-gray-300 rounded text-sm" type="text" placeholder="Bạn muốn đi đâu">
+                    <button class=" bg-yellow-400 text-white  hover:bg-yellow-500 p-2 rounded">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="flex items-center ml-4">
+                    <a href="#" class="text-white mr-4 text-sm">Điểm đến</a>
+                    <a href="#" class="text-white mr-4 text-sm">Hỏi đáp</a>
+                    <a href="#" class="text-white mr-4 text-sm">Ngôn ngữ</a>
+                    <a href="#" class="text-white mr-4 relative">
+                        <i class="fas fa-bell cursor-pointer" id="bellIcon"></i>
+                        
+                        <div id="notificationPanel" class="hidden bg-gray-800 p-2 border border-gray-300 absolute right-0 mt-12 w-56 rounded-lg shadow-lg text-sm overflow-y-auto max-h-48">
+                            
+                            <div class="mb-1">
+                                <div class="bg-green-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <strong class="text-white">A</strong>
+                                <p class="text-gray-300 inline"> đã thả cảm xúc.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-blue-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <strong class="text-white">B</strong>
+                                <p class="text-gray-300 inline"> đã bình luận.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-yellow-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <strong class="text-white">C</strong>
+                                <p class="text-gray-300 inline"> đã chia sẻ.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-green-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <strong class="text-white">A</strong>
+                                <p class="text-gray-300 inline"> đã thả cảm xúc.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-blue-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <strong class="text-white">B</strong>
+                                <p class="text-gray-300 inline"> đã bình luận.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-yellow-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <strong class="text-white">C</strong>
+                                <p class="text-gray-300 inline"> đã chia sẻ.</p>
+                            </div><div class="mb-1">
+                                <div class="bg-green-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <strong class="text-white">A</strong>
+                                <p class="text-gray-300 inline"> đã thả cảm xúc.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-blue-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <strong class="text-white">B</strong>
+                                <p class="text-gray-300 inline"> đã bình luận.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-yellow-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <strong class="text-white">C</strong>
+                                <p class="text-gray-300 inline"> đã chia sẻ.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="text-white text-sm">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var notificationPanel = document.getElementById('notificationPanel');
+            var bellIcon = document.getElementById('bellIcon');
+
+            bellIcon.addEventListener('click', function () {
+               
+                notificationPanel.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+
+    <main class="flex items-center justify-center bg-gray-100">
+        <div class="max-w-screen-md w-full"> 
+            <form class="flex items-center m-10">
+                <input type="text" placeholder="Câu hỏi phổ biến" class="p-2 border rounded font-bold w-full"> 
+                <button type="submit" class="search-button p-2 ml-2 bg-yellow-400 text-white rounded hover:bg-yellow-500">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+    
+            <div class="bg-white rounded-xl shadow-lg mt-10 mb-10 transition-transform transform hover:scale-105 hover:shadow-lg">
+                <a href="#">
+                    <img class="object-cover w-full h-48" src="https://lh5.googleusercontent.com/p/AF1QipNwMFHoOPzEjirLo2VeIeFiJfsmnISxNHZ2ulxo=w540-h312-n-k-no" alt="Item Image">
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Hạ Long</h3>
+                        <p class="mt-2 text-gray-600 h-16 overflow-hidden line-clamp-4">Hạ Long là thành phố tỉnh lỵ của tỉnh Quảng Ninh, Việt Nam. Thành phố được đặt theo tên của vịnh Hạ Long, vịnh biển nằm ở phía nam thành phố và là một di sản thiên nhiên nổi tiếng của Việt Nam. Tên "Hạ Long" nghĩa là "con rồng bay xuống</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg mt-10 mb-10 transition-transform transform hover:scale-105 hover:shadow-lg">
+                <a href="#">
+                    <img class="object-cover w-full h-48" src="https://lh5.googleusercontent.com/p/AF1QipPZ3bpiwQ7nPnEdqqd-unYLMINwVB3NrsG_THWT=w540-h312-n-k-no" alt="Item Image">
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Hà Nội</h3>
+                        <p class="mt-2 text-gray-600 h-16 overflow-hidden line-clamp-4">Hà Nội, thủ đô của Việt Nam, nổi tiếng với kiến trúc trăm tuổi và nền văn hóa phong phú với sự ảnh hưởng của khu vực Đông Nam Á, Trung Quốc và Pháp. Trung tâm thành phố là Khu phố cổ nhộn nhịp, nơi các con phố hẹp được mang tên "hàng". Có rất nhiều ngôi đền nhỏ, bao gồm Bạch Mã, tôn vinh một con ngựa huyền thoại, cùng với chợ Đồng Xuân, bán hàng gia dụng và thức ăn đường phố.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg mt-10 mb-10 transition-transform transform hover:scale-105 hover:shadow-lg">
+                <a href="#">
+                    <img class="object-cover w-full h-48" src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTMPwIBpmiTxr7NqBXgKP9O6ERdukG8rgDQ0IL4jolJAWZmDITpDE8ec9m62Nv-2Hh-SHQ4vnROfRWAXjisxYSH8Qac1D2Fv8e-8MQr19g" alt="Item Image">
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Hồ Chí Minh</h3>
+                        <p class="mt-2 text-gray-600 h-16 overflow-hidden line-clamp-4">Thành phố Hồ Chí Minh (thường được gọi là Sài Gòn) là một thành phố ở miền nam Việt Nam nổi tiếng với vai trò nòng cốt trong chiến tranh Việt Nam. Sài Gòn cũng được biết đến với địa danh của thực dân Pháp, trong đó có Nhà thờ Đức Bà được xây dựng hoàn toàn bằng nguyên liệu nhập khẩu từ Pháp và Bưu điện trung tâm được xây dựng vào thế kỷ 19. Quán ăn nằm dọc các đường phố Sài Gòn, nhất là xung quanh chợ Bến Thành nhộn nhịp.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg mt-10 mb-10 transition-transform transform hover:scale-105 hover:shadow-lg">
+                <a href="#">
+                    <img class="object-cover w-full h-48" src="https://lh5.googleusercontent.com/p/AF1QipNCXi_5nEQwa834sKjoX_j_NxCuT3si6dZQpJ6_=w540-h312-n-k-no" alt="Item Image">
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Đà Lạt</h3>
+                        <p class="mt-2 text-gray-600 h-16 overflow-hidden line-clamp-4">Đà Lạt là thành phố tỉnh lỵ trực thuộc tỉnh Lâm Đồng, nằm trên cao nguyên Lâm Viên, thuộc vùng Tây Nguyên, Việt Nam. Từ xa xưa, vùng đất này vốn là địa bàn cư trú của những cư dân người Lạch, người Chil và người Srê thuộc dân tộc Cơ Ho.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg mt-10 mb-10 transition-transform transform hover:scale-105 hover:shadow-lg">
+                <a href="#">
+                    <img class="object-cover w-full h-48" src="https://lh5.googleusercontent.com/p/AF1QipOHiiMrNSKmt9A1JxBNQiJy3JNE8N19G0Ng5SFH=w540-h312-n-k-no" alt="Item Image">
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Đà Nẵng</h3>
+                        <p class="mt-2 text-gray-600 h-16 overflow-hidden line-clamp-4">Đà Nẵng là một trong năm thành phố trực thuộc trung ương của Việt Nam, nằm tại vùng Duyên hải Nam Trung Bộ. Đây là thành phố trung tâm và lớn nhất miền Trung Việt Nam, đóng vai trò là hạt nhân quan trọng của Vùng kinh tế trọng điểm miền Trung</p>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg mt-10 mb-10 transition-transform transform hover:scale-105 hover:shadow-lg">
+                <a href="#">
+                    <img class="object-cover w-full h-48" src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSfNKHsbEmVKhyS-FV_gSsn_sMgMwgWR-xJ7pw-j3Up-83NNw5ciJeClstDrzTMETeS_NH3u7krlgXxhvWh2_RkUcp9dJO1fwLRWqE-SQ" alt="Item Image">
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Nha Trang</h3>
+                        <p class="mt-2 text-gray-600 h-16 overflow-hidden line-clamp-4">Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam. Trước đây, vùng đất Nha Trang vốn thuộc về Chiêm Thành, do đó các di tích của người Chăm vẫn còn tồn tại nhiều nơi ở Nha Trang.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg mt-10 mb-10 transition-transform transform hover:scale-105 hover:shadow-lg">
+                <a href="#">
+                    <img class="object-cover w-full h-48" src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSdenLF56qCE6mQchD6IduLyfLnPuMIkHZUs9h3z9yXISViEfc86Qt1OGIDEHb73vJ5OK3LrB1tRbqPRhS8QFOgYZt_xKg9lvgq1IzP1A" alt="Item Image">
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Huế</h3>
+                        <p class="mt-2 text-gray-600 h-16 overflow-hidden line-clamp-4">Huế là thành phố tỉnh lỵ của tỉnh Thừa Thiên Huế, Việt Nam. Huế từng là kinh đô của Việt Nam dưới triều Tây Sơn và triều Nguyễn. Hiện nay, thành phố là một trong những trung tâm về văn hóa – du lịch, y tế chuyên sâu, giáo dục đào tạo, khoa học công nghệ của Miền Trung - Tây Nguyên và cả nước.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg mt-10 mb-10 transition-transform transform hover:scale-105 hover:shadow-lg">
+                <a href="#">
+                    <img class="object-cover w-full h-48" src="https://lh5.googleusercontent.com/p/AF1QipPcKOmcgjKLHu4jN3LJq6KGkyih3mGA2WaQoREC=w540-h312-n-k-no" alt="Item Image">
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Sapa</h3>
+                        <p class="mt-2 text-gray-600 h-16 overflow-hidden line-clamp-4">Sa Pa là một thị trấn cấp huyện của tỉnh Lào Cai ở vùng Tây Bắc Việt Nam. Tính đến năm 2018, thị trấn có dân số 61.498 người. Thị trấn có diện tích 677 km2. Thủ phủ thị trấn nằm ở phường Sa Pa.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+        <footer class="footer bg-yellow-400 text-white">
+            <div class="center max-w-screen-xl mx-auto flex justify-between items-center py-8">
+                <div class="footer-left text-center">
+                    <h3 class="text-3xl font-bold p-2">Mạng xã hội du lịch Việt Nam</h3>
+                    <ul class="flex items-center justify-center space-x-4">
+                        <li><a href=""><i class="fab fa-facebook text-black text-3xl"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram text-black text-3xl"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-right ml-8 text-center">
+                    <h3 class="text-3xl font-bold mb-2">VỀ VIEDI</h3>
+                    <ul class="text-xl">
+                        <li><a href="" class="text-footer">Giới thiệu</a></li>
+                        <li><a href="" class="text-footer">Liên hệ</a></li>
+                        <li><a href="" class="text-footer">Chính sách sử dụng</a></li>
+                        <li><a href="" class="text-footer">Chính sách bảo mật</a></li>
+                        <li><a href="" class="text-footer">Chính sách quyền riêng tư</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+    
+</body>
+</html>

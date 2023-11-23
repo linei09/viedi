@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VieDi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="flex items-center justify-between p-4 bg-gray-900">
+            <div class="flex items-center">
+                <a href="" class="flex items-center">
+                    <img src="logo.png" class="h-12 w-16" alt="Logo">
+                    <span class="text-white text-lg ml-2 font-bold">VIEDI</span>
+                </a>
+                <div class="ml-4">
+                    <input class="p-2 border border-gray-300 rounded text-sm" type="text" placeholder="Bạn muốn đi đâu">
+                    <button class=" bg-yellow-400 text-white  hover:bg-yellow-500 p-2 rounded">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="flex items-center ml-4">
+                    <a href="#" class="text-white mr-4 text-sm">Điểm đến</a>
+                    <a href="#" class="text-white mr-4 text-sm">Hỏi đáp</a>
+                    <a href="#" class="text-white mr-4 text-sm">Ngôn ngữ</a>
+                    <a href="#" class="text-white mr-4 relative">
+                        <i class="fas fa-bell cursor-pointer" id="bellIcon"></i>
+                        
+                        <div id="notificationPanel" class="hidden bg-gray-800 p-2 border border-gray-300 absolute right-0 mt-12 w-56 rounded-lg shadow-lg text-sm overflow-y-auto max-h-48">
+                            
+                            <div class="mb-1">
+                                <div class="bg-green-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <strong class="text-white">A</strong>
+                                <p class="text-gray-300 inline"> đã thả cảm xúc.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-blue-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <strong class="text-white">B</strong>
+                                <p class="text-gray-300 inline"> đã bình luận.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-yellow-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <strong class="text-white">C</strong>
+                                <p class="text-gray-300 inline"> đã chia sẻ.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-green-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <strong class="text-white">A</strong>
+                                <p class="text-gray-300 inline"> đã thả cảm xúc.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-blue-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <strong class="text-white">B</strong>
+                                <p class="text-gray-300 inline"> đã bình luận.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-yellow-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <strong class="text-white">C</strong>
+                                <p class="text-gray-300 inline"> đã chia sẻ.</p>
+                            </div><div class="mb-1">
+                                <div class="bg-green-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <strong class="text-white">A</strong>
+                                <p class="text-gray-300 inline"> đã thả cảm xúc.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-blue-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <strong class="text-white">B</strong>
+                                <p class="text-gray-300 inline"> đã bình luận.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-yellow-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <strong class="text-white">C</strong>
+                                <p class="text-gray-300 inline"> đã chia sẻ.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="text-white text-sm">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var notificationPanel = document.getElementById('notificationPanel');
+            var bellIcon = document.getElementById('bellIcon');
+
+            bellIcon.addEventListener('click', function () {
+               
+                notificationPanel.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+
+    
+    <img src="https://cdn.glitch.global/e08971eb-0b71-4281-9445-ca10502cb7d6/318f1e7f-b066-4d79-ab14-5b21b74de57a.image.png?v=1696361824447" class="w-full h-auto">
+
+    <div class="relative flex items-center justify-center bg-gray-200">
+     
+        <img src="https://cdn.glitch.global/c9a0f85e-2c78-4acb-a71c-09b96e9023f3/7f13fc08-23db-4d30-9994-8bbee10d806c.image.png?v=1700587833515" class="w-auto h-auto">
+    
+      
+        <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            <p class="text-3xl font-bold text-black mb-3">Địa điểm bạn quan tâm</p>
+          </div>
+    </div>
+
+    <div class="flex justify-center ml-auto bg-gray-200 ">
+
+        <div class="w-900 mx-10 mt-10 mb-10">
+            
+            <div class="p-4 mx-auto max-w-2xl bg-yellow-100 pt-2 mb-2 rounded-xl shadow-xl">
+                <div class="flex items-center space-x-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
+                    <div>
+                        <a href="#">UIT</a>
+                    </div>
+                </div>
+                <div class="title-cmt mt-2">
+                    <a href="#"> Địa điểm dừng chân cho khách tour</a>
+                </div>
+                <div class="mt-2">
+                    <a href="#">Ở Hà Nội có chỗ nào cho khách tour thư giãn, nghỉ ngơi trước khi ra sân bay không ạ? Kiểu massage chân, xông hơi, tăm sục, ăn nhẹ... gần khu sân bay hoặc đường ra Nôi bài càng tổt</a>
+                </div>
+                <div class="reaction flex items-center mt-2">
+                    <div class="emoji-container flex items-center mr-4">
+                        <i class="far fa-heart emoji heart text-red-500"></i>
+                        <span class="text ml-2">0 Love</span>
+                    </div>
+                    <div class="emoji-container flex items-center mr-4">
+                        <i class="far fa-comments emoji comment text-blue-500"></i>
+                        <span class="text ml-2">0 Bình luận</span>
+                    </div>
+                    <div class="emoji-container flex items-center">
+                        <i class="far fa-share-from-square emoji share text-green-500"></i>
+                        <span class="text ml-2">Chia sẻ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 mx-auto max-w-2xl bg-yellow-100 pt-2 mb-2 rounded-xl shadow-xl">
+                <div class="flex items-center space-x-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
+                    <div>
+                        <a href="#">UIT</a>
+                    </div>
+                </div>
+                <div class="title-cmt mt-2">
+                    <a href="#"> Địa điểm dừng chân cho khách tour</a>
+                </div>
+                <div class="mt-2">
+                    <a href="#">Ở Hà Nội có chỗ nào cho khách tour thư giãn, nghỉ ngơi trước khi ra sân bay không ạ? Kiểu massage chân, xông hơi, tăm sục, ăn nhẹ... gần khu sân bay hoặc đường ra Nôi bài càng tổt</a>
+                </div>
+                <div class="reaction flex items-center mt-2">
+                    <div class="emoji-container flex items-center mr-4">
+                        <i class="far fa-heart emoji heart text-red-500"></i>
+                        <span class="text ml-2">0 Love</span>
+                    </div>
+                    <div class="emoji-container flex items-center mr-4">
+                        <i class="far fa-comments emoji comment text-blue-500"></i>
+                        <span class="text ml-2">0 Bình luận</span>
+                    </div>
+                    <div class="emoji-container flex items-center">
+                        <i class="far fa-share-from-square emoji share text-green-500"></i>
+                        <span class="text ml-2">Chia sẻ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 mx-auto max-w-2xl bg-yellow-100 pt-2 mb-2 rounded-xl shadow-xl">
+                <div class="flex items-center space-x-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
+                    <div>
+                        <a href="#">UIT</a>
+                    </div>
+                </div>
+                <div class="title-cmt mt-2">
+                    <a href="#"> Địa điểm dừng chân cho khách tour</a>
+                </div>
+                <div class="mt-2">
+                    <a href="#">Ở Hà Nội có chỗ nào cho khách tour thư giãn, nghỉ ngơi trước khi ra sân bay không ạ? Kiểu massage chân, xông hơi, tăm sục, ăn nhẹ... gần khu sân bay hoặc đường ra Nôi bài càng tổt</a>
+                </div>
+                <div class="reaction flex items-center mt-2">
+                    <div class="emoji-container flex items-center mr-4">
+                        <i class="far fa-heart emoji heart text-red-500"></i>
+                        <span class="text ml-2">0 Love</span>
+                    </div>
+                    <div class="emoji-container flex items-center mr-4">
+                        <i class="far fa-comments emoji comment text-blue-500"></i>
+                        <span class="text ml-2">0 Bình luận</span>
+                    </div>
+                    <div class="emoji-container flex items-center">
+                        <i class="far fa-share-from-square emoji share text-green-500"></i>
+                        <span class="text ml-2">Chia sẻ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 mx-auto max-w-2xl bg-yellow-100 pt-2 mb-2 rounded-xl shadow-xl">
+                <div class="flex items-center space-x-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
+                    <div>
+                        <a href="#">UIT</a>
+                    </div>
+                </div>
+                <div class="title-cmt mt-2">
+                    <a href="#"> Địa điểm dừng chân cho khách tour</a>
+                </div>
+                <div class="mt-2">
+                    <a href="#">Ở Hà Nội có chỗ nào cho khách tour thư giãn, nghỉ ngơi trước khi ra sân bay không ạ? Kiểu massage chân, xông hơi, tăm sục, ăn nhẹ... gần khu sân bay hoặc đường ra Nôi bài càng tổt</a>
+                </div>
+                <div class="reaction flex items-center mt-2">
+                    <div class="emoji-container flex items-center mr-4">
+                        <i class="far fa-heart emoji heart text-red-500"></i>
+                        <span class="text ml-2">0 Love</span>
+                    </div>
+                    <div class="emoji-container flex items-center mr-4">
+                        <i class="far fa-comments emoji comment text-blue-500"></i>
+                        <span class="text ml-2">0 Bình luận</span>
+                    </div>
+                    <div class="emoji-container flex items-center">
+                        <i class="far fa-share-from-square emoji share text-green-500"></i>
+                        <span class="text ml-2">Chia sẻ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 mx-auto max-w-2xl bg-yellow-100 pt-2 mb-2 rounded-xl shadow-xl">
+                <div class="flex items-center space-x-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
+                    <div>
+                        <a href="#">UIT</a>
+                    </div>
+                </div>
+                <div class="title-cmt mt-2">
+                    <a href="#"> Địa điểm dừng chân cho khách tour</a>
+                </div>
+                <div class="mt-2">
+                    <a href="#">Ở Hà Nội có chỗ nào cho khách tour thư giãn, nghỉ ngơi trước khi ra sân bay không ạ? Kiểu massage chân, xông hơi, tăm sục, ăn nhẹ... gần khu sân bay hoặc đường ra Nôi bài càng tổt</a>
+                </div>
+                <div class="reaction flex items-center mt-2">
+                    <div class="emoji-container flex items-center mr-4">
+                        <i class="far fa-heart emoji heart text-red-500"></i>
+                        <span class="text ml-2">0 Love</span>
+                    </div>
+                    <div class="emoji-container flex items-center mr-4">
+                        <i class="far fa-comments emoji comment text-blue-500"></i>
+                        <span class="text ml-2">0 Bình luận</span>
+                    </div>
+                    <div class="emoji-container flex items-center">
+                        <i class="far fa-share-from-square emoji share text-green-500"></i>
+                        <span class="text ml-2">Chia sẻ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-4 mx-auto max-w-2xl bg-yellow-100 pt-2 mb-2 rounded-xl shadow-xl">
+                <div class="flex items-center space-x-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
+                    <div>
+                        <a href="#">UIT</a>
+                    </div>
+                </div>
+                <div class="title-cmt mt-2">
+                    <a href="#"> Địa điểm dừng chân cho khách tour</a>
+                </div>
+                <div class="mt-2">
+                    <a href="#">Ở Hà Nội có chỗ nào cho khách tour thư giãn, nghỉ ngơi trước khi ra sân bay không ạ? Kiểu massage chân, xông hơi, tăm sục, ăn nhẹ... gần khu sân bay hoặc đường ra Nôi bài càng tổt</a>
+                </div>
+                <div class="reaction flex items-center mt-2">
+                    <div class="emoji-container flex items-center mr-4">
+                        <i class="far fa-heart emoji heart text-red-500"></i>
+                        <span class="text ml-2">0 Love</span>
+                    </div>
+                    <div class="emoji-container flex items-center mr-4">
+                        <i class="far fa-comments emoji comment text-blue-500"></i>
+                        <span class="text ml-2">0 Bình luận</span>
+                    </div>
+                    <div class="emoji-container flex items-center">
+                        <i class="far fa-share-from-square emoji share text-green-500"></i>
+                        <span class="text ml-2">Chia sẻ</span>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+
+        <div class="w-230 mt-10 mb-10 flex flex-col">
+
+            <div>
+                <form>
+                    <input type="text" placeholder="Câu hỏi phổ biến" class="p-2 border rounded font-bold">
+                    <button type="submit" class="search-button p-2 ml-2 bg-yellow-400 text-white rounded hover:bg-yellow-500">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class=" text-2xl pt-10 pb-5 font-bold">Tag</div>
+            <div class="flex flex-wrap max-w-xs">
+                <a href="#" class="inline-block m-2 color-gray-700 bg-gray-300 rounded-full py-2 px-4 font-bold no-underline transition-transform transform hover:scale-105 hover:shadow-lg">Hồ Chí Minh</a>
+                <a href="#" class="inline-block m-2 color-gray-700 bg-gray-300 rounded-full py-2 px-4 font-bold no-underline transition-transform transform hover:scale-105 hover:shadow-lg">Đà Nẵng</a>
+                <a href="#" class="inline-block m-2 color-gray-700 bg-gray-300 rounded-full py-2 px-4 font-bold no-underline transition-transform transform hover:scale-105 hover:shadow-lg">Đà Lạt</a>
+                <a href="#" class="inline-block m-2 color-gray-700 bg-gray-300 rounded-full py-2 px-4 font-bold no-underline transition-transform transform hover:scale-105 hover:shadow-lg">Hà Nội</a>
+                <a href="#" class="inline-block m-2 color-gray-700 bg-gray-300 rounded-full py-2 px-4 font-bold no-underline transition-transform transform hover:scale-105 hover:shadow-lg">Lào Cai</a>
+                <a href="#" class="inline-block m-2 color-gray-700 bg-gray-300 rounded-full py-2 px-4 font-bold no-underline transition-transform transform hover:scale-105 hover:shadow-lg">An Giang</a>
+                <a href="#" class="inline-block m-2 color-gray-700 bg-gray-300 rounded-full py-2 px-4 font-bold no-underline transition-transform transform hover:scale-105 hover:shadow-lg">Long An</a>
+                <a href="#" class="inline-block m-2 color-gray-700 bg-gray-300 rounded-full py-2 px-4 font-bold no-underline transition-transform transform hover:scale-105 hover:shadow-lg">Vũng Tàu</a>
+                <a href="#" class="inline-block m-2 color-gray-700 bg-gray-300 rounded-full py-2 px-4 font-bold no-underline transition-transform transform hover:scale-105 hover:shadow-lg">Đồng Nai</a>
+                <a href="#" class="inline-block m-2 color-gray-700 bg-gray-300 rounded-full py-2 px-4 font-bold no-underline transition-transform transform hover:scale-105 hover:shadow-lg">Quận Cam</a>
+            </div>
+
+            <div>
+                <div class="text-center p-10 font-bold text-2xl">Địa điểm nổi bật</div>
+                
+                <div class="group bg-yellow-200 rounded p-4 mb-4 font-bold text-xl transition-transform transform hover:scale-105 hover:shadow-lg">
+                    <a href="link">1. Hồ Chí Minh</a>
+                </div>
+                <div class="group bg-yellow-200 rounded p-4 mb-4 font-bold text-xl transition-transform transform hover:scale-105 hover:shadow-lg">
+                    <a href="link">2. Hà Nội</a>
+                </div>
+                <div class="group bg-yellow-200 rounded p-4 mb-4 font-bold text-xl transition-transform transform hover:scale-105 hover:shadow-lg">
+                    <a href="link">3. Đà Nẵng</a>
+                </div>
+                <div class="group bg-yellow-200 rounded p-4 mb-4 font-bold text-xl transition-transform transform hover:scale-105 hover:shadow-lg">
+                    <a href="link">4. Sapa</a>
+                </div>
+                <div class="group bg-yellow-200 rounded p-4 mb-4 font-bold text-xl transition-transform transform hover:scale-105 hover:shadow-lg">
+                    <a href="link">5. Cần Thơ</a>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+    
+        <footer class="footer bg-yellow-400 text-white">
+            <div class="center max-w-screen-xl mx-auto flex justify-between items-center py-8">
+                <div class="footer-left text-center">
+                    <h3 class="text-3xl font-bold p-2">Mạng xã hội du lịch Việt Nam</h3>
+                    <ul class="flex items-center justify-center space-x-4">
+                        <li><a href=""><i class="fab fa-facebook text-black text-3xl"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram text-black text-3xl"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-right ml-8 text-center">
+                    <h3 class="text-3xl font-bold mb-2">VỀ VIEDI</h3>
+                    <ul class="text-xl">
+                        <li><a href="" class="text-footer">Giới thiệu</a></li>
+                        <li><a href="" class="text-footer">Liên hệ</a></li>
+                        <li><a href="" class="text-footer">Chính sách sử dụng</a></li>
+                        <li><a href="" class="text-footer">Chính sách bảo mật</a></li>
+                        <li><a href="" class="text-footer">Chính sách quyền riêng tư</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+    
+</body>
+</html>

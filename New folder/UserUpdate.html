@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VieDi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+
+ <main class=" bg-gray-100 flex flex-col">
+    <header class="header">
+        <nav class="flex items-center justify-between p-4 bg-gray-900">
+            <div class="flex items-center">
+                <a href="" class="flex items-center">
+                    <img src="logo.png" class="h-12 w-16" alt="Logo">
+                    <span class="text-white text-lg ml-2 font-bold">VIEDI</span>
+                </a>
+                <div class="ml-4">
+                    <input class="p-2 border border-gray-300 rounded text-sm" type="text" placeholder="Bạn muốn đi đâu">
+                    <button class=" bg-yellow-400 text-white  hover:bg-yellow-500 p-2 rounded">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="flex items-center ml-4">
+                    <a href="#" class="text-white mr-4 text-sm">Điểm đến</a>
+                    <a href="#" class="text-white mr-4 text-sm">Hỏi đáp</a>
+                    <a href="#" class="text-white mr-4 text-sm">Ngôn ngữ</a>
+                    <a href="#" class="text-white mr-4 relative">
+                        <i class="fas fa-bell cursor-pointer" id="bellIcon"></i>
+                        
+                        <div id="notificationPanel" class="hidden bg-gray-800 p-2 border border-gray-300 absolute right-0 mt-12 w-56 rounded-lg shadow-lg text-sm overflow-y-auto max-h-48">
+                            
+                            <div class="mb-1">
+                                <div class="bg-green-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <strong class="text-white">A</strong>
+                                <p class="text-gray-300 inline"> đã thả cảm xúc.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-blue-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <strong class="text-white">B</strong>
+                                <p class="text-gray-300 inline"> đã bình luận.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-yellow-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <strong class="text-white">C</strong>
+                                <p class="text-gray-300 inline"> đã chia sẻ.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-green-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <strong class="text-white">A</strong>
+                                <p class="text-gray-300 inline"> đã thả cảm xúc.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-blue-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <strong class="text-white">B</strong>
+                                <p class="text-gray-300 inline"> đã bình luận.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-yellow-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <strong class="text-white">C</strong>
+                                <p class="text-gray-300 inline"> đã chia sẻ.</p>
+                            </div><div class="mb-1">
+                                <div class="bg-green-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <strong class="text-white">A</strong>
+                                <p class="text-gray-300 inline"> đã thả cảm xúc.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-blue-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <strong class="text-white">B</strong>
+                                <p class="text-gray-300 inline"> đã bình luận.</p>
+                            </div>
+                            <div class="mb-1">
+                                <div class="bg-yellow-500 text-white p-1 rounded-full inline-block mr-1">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <strong class="text-white">C</strong>
+                                <p class="text-gray-300 inline"> đã chia sẻ.</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="text-white text-sm">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var notificationPanel = document.getElementById('notificationPanel');
+            var bellIcon = document.getElementById('bellIcon');
+
+            bellIcon.addEventListener('click', function () {
+               
+                notificationPanel.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+
+
+        <div class="w-900 mx-auto mb-10 mt-10">
+        
+            
+            <div class="relative">
+                <div class="relative">
+                    <img src="https://h3jd9zjnmsobj.vcdn.cloud/public/v7/banner-profile.png" alt="Your Image" class="w-full h-auto">
+                    <div class="absolute bottom-4 right-4">
+                        <button class="bg-gray-300 px-2 py-1 z-10 rounded-xl mr-2">
+                            <i class="fas fa-pencil-alt"></i>
+                            <span class="edit-text">Chỉnh sửa thông tin</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex items-end justify-start mt-4 absolute top-32 left-6">
+                    <div class="relative">
+                        <img src="https://h3jd9zjnmsobj.vcdn.cloud/public/v7/banner-profile.png" alt="Avatar" class="w-32 h-32 object-cover rounded-full">
+                        <button class="absolute bottom-0 right-0 bg-gray-300 px-2 py-1 z-1 rounded-full">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="ml-2 text-black mb-6">
+                        <p class="text-lg font-semibold">Tên Người Dùng</p>
+                    </div>
+                </div>
+            </div>
+            <div
+            id="changePasswordModal"
+            class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+            <div class="bg-white p-8 rounded shadow-md max-w-xl w-full">
+            
+            <h2 class="text-2xl font-bold mb-4">Thay Đổi Mật Khẩu</h2>
+            
+            <div class="mb-4">
+                <label for="currentPassword" class="block text-sm font-semibold text-gray-600">Mật Khẩu Hiện Tại</label>
+                <input type="password" id="currentPassword" class="border rounded px-3 py-2 w-full">
+            </div>
+            
+            <div class="mb-4">
+                <label for="newPassword" class="block text-sm font-semibold text-gray-600">Mật Khẩu Mới</label>
+                <input type="password" id="newPassword" class="border rounded px-3 py-2 w-full">
+            </div>
+            
+            <div class="mb-6">
+                <label for="confirmNewPassword" class="block text-sm font-semibold text-gray-600">Nhập Lại Mật Khẩu Mới</label>
+                <input type="password" id="confirmNewPassword" class="border rounded px-3 py-2 w-full">
+            </div>
+            
+            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Lưu Thay Đổi</button>
+            
+            <button
+                class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                onclick="closeChangePasswordModal()">
+                Đóng
+            </button>
+            </div>
+        </div>
+            <div class="max-w-full mx-auto bg-white rounded p-6 shadow-md mt-16">
+                <div class="bg-white rounded p-6  flex flex-col items-center">
+                    <div class="mb-4">
+                        <h1 class="text-2xl font-bold">Thông tin</h1>
+                        <hr class="my-2">
+                    </div>
+                </div>
+                <div class="mb-4 flex items-center">
+                    <label class="block text-sm font-medium text-gray-600">Tên:</label>
+                    <span class="text-gray-800 ml-2" id="userName">Xin chào các bạn</span>
+                    <button class="ml-auto px-4 py-2 bg-yellow-300 text-black rounded font-bold hover:bg-yellow-200 transition duration-300" onclick="editField('userName')">Edit</button>
+            
+                </div>
+                
+                <div class="mb-4 flex items-center">
+                    <label class="block text-sm font-medium text-gray-600">Email:</label>
+                    <span class="text-gray-800 ml-2" id="userEmail">world.doe@gmail.com</span>
+                    <button class="ml-auto px-4 py-2 bg-yellow-300 text-black rounded font-bold hover:bg-yellow-200 transition duration-300" onclick="editField('userEmail')">Edit</button>
+                </div>
+            
+                <div class="mb-4 flex items-center">
+                    <label class="block text-sm font-medium text-gray-600">Số điện thoại:</label>
+                    <span class="text-gray-800 ml-2" id="userPhone">0848 888 888</span>
+                    <button class="ml-auto px-4 py-2 bg-yellow-300 text-black rounded font-bold hover:bg-yellow-200 transition duration-300" onclick="editField('userPhone')">Edit</button>
+                </div>
+            
+                <div class="mb-4 flex items-center">
+                    <label class="block text-sm font-medium text-gray-600">Ngày sinh:</label>
+                    <span class="text-gray-800 ml-2" id="userDOB">01/01/1990</span>
+                    <button class="ml-auto px-4 py-2 bg-yellow-300 text-black rounded font-bold hover:bg-yellow-200 transition duration-300" onclick="editField('userDOB')">Edit</button>
+                </div>
+            
+                <div class="mb-4 flex items-center">
+                    <label class="block text-sm font-medium text-gray-600">Giới tính:</label>
+                    <select class="ml-2 border rounded px-2 py-1" id="userGender">
+                        <option value="male">Nam</option>
+                        <option value="female">Nữ</option>
+                        <option value="other">Khác</option>
+                    </select>
+                </div>
+                
+
+                <div class="mb-4 flex items-center">
+                    <label class="block text-sm font-medium text-gray-600">Mật khẩu:</label>
+                    <button
+                    id="changePasswordButton"
+                    class="ml-auto px-4 py-2 bg-yellow-300 text-black rounded font-bold hover:bg-yellow-200 transition duration-300"
+                    onclick="openChangePasswordModal()">Edit
+                </button>
+                </div>
+
+                <div class="flex justify-center">
+                    <button class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700 transition duration-300" onclick="saveChanges()">Save Changes</button>
+                </div>
+            </div>
+           
+
+  
+           
+
+  
+            <script>
+                function editField(fieldId) {
+                    var fieldElement = document.getElementById(fieldId);
+                    var fieldInput;
+            
+                    if (fieldId === 'userGender') {
+                        fieldInput = document.createElement('select');
+                        fieldInput.className = 'border rounded px-2 py-1';
+            
+                        var options = ['Nam', 'Nữ', 'Khác'];
+                        options.forEach(function (option) {
+                            var optionElement = document.createElement('option');
+                            optionElement.value = option.toLowerCase();
+                            optionElement.text = option;
+                            fieldInput.add(optionElement);
+                        });
+                    } else {
+                        fieldInput = document.createElement('input');
+                        fieldInput.type = 'text';
+                        fieldInput.className = 'border rounded px-2 py-1';
+                    }
+            
+                    fieldInput.value = fieldElement.innerText;
+            
+                    fieldInput.addEventListener('blur', function () {
+                        fieldElement.innerText = fieldInput.value;
+                        
+                    });
+            
+                    fieldElement.innerHTML = '';
+                    fieldElement.appendChild(fieldInput);
+                    fieldInput.focus();
+                }
+            
+                
+
+                function openChangePasswordModal() {
+                    
+                    var modal = document.getElementById('changePasswordModal');
+                    if (modal.classList.contains('hidden')) {
+                        modal.classList.remove('hidden');
+                    }
+                }
+
+                function closeChangePasswordModal() {
+                    document.getElementById('changePasswordModal').classList.add('hidden');
+                }
+
+                function savePasswordChanges() {
+                   
+                    alert("Changes saved!");
+                    closeChangePasswordModal();
+                }
+
+                function saveChanges() {
+                    
+                    alert("Changes saved!");
+                }
+            </script>
+        </div>       
+                
+
+        <footer class="footer bg-yellow-400 text-white">
+            <div class="center max-w-screen-xl mx-auto flex justify-between items-center py-8">
+                <div class="footer-left text-center">
+                    <h3 class="text-3xl font-bold p-2">Mạng xã hội du lịch Việt Nam</h3>
+                    <ul class="flex items-center justify-center space-x-4">
+                        <li><a href=""><i class="fab fa-facebook text-black text-3xl"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram text-black text-3xl"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-right ml-8 text-center">
+                    <h3 class="text-3xl font-bold mb-2">VỀ VIEDI</h3>
+                    <ul class="text-xl">
+                        <li><a href="" class="text-footer">Giới thiệu</a></li>
+                        <li><a href="" class="text-footer">Liên hệ</a></li>
+                        <li><a href="" class="text-footer">Chính sách sử dụng</a></li>
+                        <li><a href="" class="text-footer">Chính sách bảo mật</a></li>
+                        <li><a href="" class="text-footer">Chính sách quyền riêng tư</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+    
+</body>
+</html>
