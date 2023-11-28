@@ -123,7 +123,7 @@
             });
         });
     </script>
-
+    
         <div class="w-900 mx-auto mt-10 mb-10">
         
 
@@ -151,6 +151,7 @@
                 </div>
 
                 <div class="p-4 mx-auto max-w-2xl bg-yellow-100 mt-2 mb-2 rounded-xl">
+                    
                     <div class="flex items-center space-x-4">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
                         <div>
@@ -165,20 +166,65 @@
                     </div>
                     <div class="reaction flex items-center mt-2">
                         <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-heart emoji heart text-red-500"></i>
-                            <span class="text ml-2">0 Love</span>
-                        </div>
-                        <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-comments emoji comment text-blue-500"></i>
+                            <i class="far fa-comments emoji comment text-blue-500" id="commentBtn1"></i>
                             <span class="text ml-2">0 Bình luận</span>
                         </div>
-                        <div class="emoji-container flex items-center">
-                            <i class="far fa-share-from-square emoji share text-green-500"></i>
-                            <span class="text ml-2">Chia sẻ</span>
-                        </div>
+                    </div>
+                    <div class="comment-section hidden w-full" id="commentSection1">
+                        <textarea class="w-full" placeholder="Viết bình luận của bạn"></textarea>
+                        <button onclick="postComment(1)" class="bg-yellow-400 text-black hover:bg-yellow-500 p-2 rounded font-bold">Gửi</button>
                     </div>
                 </div>
-
+            
+                <div class="p-4 mx-auto max-w-2xl bg-yellow-100 mt-2 mb-2 rounded-xl">
+                    <div class="flex items-center space-x-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
+                        <div>
+                            <a href="#">UIT</a>
+                        </div>
+                    </div>
+                    <div class="title-cmt mt-2 font-bold text-xl">
+                        <a href="#"> Địa điểm dừng chân cho khách tour</a>
+                    </div>
+                    <div class="mt-2">
+                        <a href="#">Ở Hà Nội có chỗ nào cho khách tour thư giãn, nghỉ ngơi trước khi ra sân bay không ạ? Kiểu massage chân, xông hơi, tăm sục, ăn nhẹ... gần khu sân bay hoặc đường ra Nôi bài càng tổt</a>
+                    </div>
+                    <div class="reaction flex items-center mt-2">
+                        <div class="emoji-container flex items-center mr-4">
+                            <i class="far fa-comments emoji comment text-blue-500" id="commentBtn2"></i>
+                            <span class="text ml-2">0 Bình luận</span>
+                        </div>
+                    </div>
+                    <div class="comment-section hidden w-full" id="commentSection2">
+                        <textarea class="w-full" placeholder="Viết bình luận của bạn"></textarea>
+                        <button onclick="postComment(2)" class="bg-yellow-400 text-black hover:bg-yellow-500 p-2 rounded font-bold">Gửi</button>
+                    </div>
+                </div>
+            
+                <div class="p-4 mx-auto max-w-2xl bg-yellow-100 mt-2 mb-2 rounded-xl">
+                    <div class="flex items-center space-x-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
+                        <div>
+                            <a href="#">UIT</a>
+                        </div>
+                    </div>
+                    <div class="title-cmt mt-2 font-bold text-xl">
+                        <a href="#"> Địa điểm dừng chân cho khách tour</a>
+                    </div>
+                    <div class="mt-2">
+                        <a href="#">Ở Hà Nội có chỗ nào cho khách tour thư giãn, nghỉ ngơi trước khi ra sân bay không ạ? Kiểu massage chân, xông hơi, tăm sục, ăn nhẹ... gần khu sân bay hoặc đường ra Nôi bài càng tổt</a>
+                    </div>
+                    <div class="reaction flex items-center mt-2">
+                        <div class="emoji-container flex items-center mr-4">
+                            <i class="far fa-comments emoji comment text-blue-500" id="commentBtn3"></i>
+                            <span class="text ml-2">0 Bình luận</span>
+                        </div>
+                    </div>
+                    <div class="comment-section hidden w-full" id="commentSection3">
+                        <textarea class="w-full" placeholder="Viết bình luận của bạn"></textarea>
+                        <button onclick="postComment(3)" class="bg-yellow-400 text-black hover:bg-yellow-500 p-2 rounded font-bold">Gửi</button>
+                    </div>
+                </div>
 
                 <div class="p-4 mx-auto max-w-2xl bg-yellow-100 mt-2 mb-2 rounded-xl">
                     <div class="flex items-center space-x-4">
@@ -203,48 +249,16 @@
                     </div>
                     <div class="reaction flex items-center mt-2">
                         <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-heart emoji heart text-red-500"></i>
-                            <span class="text ml-2">0 Love</span>
-                        </div>
-                        <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-comments emoji comment text-blue-500"></i>
+                            <i class="far fa-comments emoji comment text-blue-500" id="commentBtn4"></i>
                             <span class="text ml-2">0 Bình luận</span>
                         </div>
-                        <div class="emoji-container flex items-center">
-                            <i class="far fa-share-from-square emoji share text-green-500"></i>
-                            <span class="text ml-2">Chia sẻ</span>
-                        </div>
+                    </div>
+                    <div class="comment-section hidden w-full" id="commentSection4">
+                        <textarea class="w-full" placeholder="Viết bình luận của bạn"></textarea>
+                        <button onclick="postComment(4)" class="bg-yellow-400 text-black hover:bg-yellow-500 p-2 rounded font-bold">Gửi</button>
                     </div>
                 </div>
 
-                <div class="p-4 mx-auto max-w-2xl bg-yellow-100 mt-2 mb-2 rounded-xl">
-                    <div class="flex items-center space-x-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
-                        <div>
-                            <a href="#">UIT</a>
-                        </div>
-                    </div>
-                    <div class="title-cmt mt-2 font-bold text-xl">
-                        <a href="#"> Địa điểm dừng chân cho khách tour</a>
-                    </div>
-                    <div class="mt-2">
-                        <a href="#">Ở Hà Nội có chỗ nào cho khách tour thư giãn, nghỉ ngơi trước khi ra sân bay không ạ? Kiểu massage chân, xông hơi, tăm sục, ăn nhẹ... gần khu sân bay hoặc đường ra Nôi bài càng tổt</a>
-                    </div>
-                    <div class="reaction flex items-center mt-2">
-                        <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-heart emoji heart text-red-500"></i>
-                            <span class="text ml-2">0 Love</span>
-                        </div>
-                        <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-comments emoji comment text-blue-500"></i>
-                            <span class="text ml-2">0 Bình luận</span>
-                        </div>
-                        <div class="emoji-container flex items-center">
-                            <i class="far fa-share-from-square emoji share text-green-500"></i>
-                            <span class="text ml-2">Chia sẻ</span>
-                        </div>
-                    </div>
-                </div>
                 <div class="p-4 mx-auto max-w-2xl bg-yellow-100 mt-2 mb-2 rounded-xl">
                     <div class="flex items-center space-x-4">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
@@ -268,19 +282,16 @@
                     </div>
                     <div class="reaction flex items-center mt-2">
                         <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-heart emoji heart text-red-500"></i>
-                            <span class="text ml-2">0 Love</span>
-                        </div>
-                        <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-comments emoji comment text-blue-500"></i>
+                            <i class="far fa-comments emoji comment text-blue-500" id="commentBtn5"></i>
                             <span class="text ml-2">0 Bình luận</span>
                         </div>
-                        <div class="emoji-container flex items-center">
-                            <i class="far fa-share-from-square emoji share text-green-500"></i>
-                            <span class="text ml-2">Chia sẻ</span>
-                        </div>
+                    </div>
+                    <div class="comment-section hidden w-full" id="commentSection5">
+                        <textarea class="w-full" placeholder="Viết bình luận của bạn"></textarea>
+                        <button onclick="postComment(5)" class="bg-yellow-400 text-black hover:bg-yellow-500 p-2 rounded font-bold">Gửi</button>
                     </div>
                 </div>
+
                 <div class="p-4 mx-auto max-w-2xl bg-yellow-100 mt-2 mb-2 rounded-xl">
                     <div class="flex items-center space-x-4">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
@@ -304,45 +315,13 @@
                     </div>
                     <div class="reaction flex items-center mt-2">
                         <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-heart emoji heart text-red-500"></i>
-                            <span class="text ml-2">0 Love</span>
-                        </div>
-                        <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-comments emoji comment text-blue-500"></i>
+                            <i class="far fa-comments emoji comment text-blue-500" id="commentBtn6"></i>
                             <span class="text ml-2">0 Bình luận</span>
                         </div>
-                        <div class="emoji-container flex items-center">
-                            <i class="far fa-share-from-square emoji share text-green-500"></i>
-                            <span class="text ml-2">Chia sẻ</span>
-                        </div>
                     </div>
-                </div>
-                <div class="p-4 mx-auto max-w-2xl bg-yellow-100 mt-2 mb-2 rounded-xl">
-                    <div class="flex items-center space-x-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
-                        <div>
-                            <a href="#">UIT</a>
-                        </div>
-                    </div>
-                    <div class="title-cmt mt-2 font-bold text-xl">
-                        <a href="#"> Địa điểm dừng chân cho khách tour</a>
-                    </div>
-                    <div class="mt-2">
-                        <a href="#">Ở Hà Nội có chỗ nào cho khách tour thư giãn, nghỉ ngơi trước khi ra sân bay không ạ? Kiểu massage chân, xông hơi, tăm sục, ăn nhẹ... gần khu sân bay hoặc đường ra Nôi bài càng tổt</a>
-                    </div>
-                    <div class="reaction flex items-center mt-2">
-                        <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-heart emoji heart text-red-500"></i>
-                            <span class="text ml-2">0 Love</span>
-                        </div>
-                        <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-comments emoji comment text-blue-500"></i>
-                            <span class="text ml-2">0 Bình luận</span>
-                        </div>
-                        <div class="emoji-container flex items-center">
-                            <i class="far fa-share-from-square emoji share text-green-500"></i>
-                            <span class="text ml-2">Chia sẻ</span>
-                        </div>
+                    <div class="comment-section hidden w-full" id="commentSection6">
+                        <textarea class="w-full" placeholder="Viết bình luận của bạn"></textarea>
+                        <button onclick="postComment(6)" class="bg-yellow-400 text-black hover:bg-yellow-500 p-2 rounded font-bold">Gửi</button>
                     </div>
                 </div>
 
@@ -361,17 +340,13 @@
                     </div>
                     <div class="reaction flex items-center mt-2">
                         <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-heart emoji heart text-red-500"></i>
-                            <span class="text ml-2">0 Love</span>
-                        </div>
-                        <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-comments emoji comment text-blue-500"></i>
+                            <i class="far fa-comments emoji comment text-blue-500" id="commentBtn7"></i>
                             <span class="text ml-2">0 Bình luận</span>
                         </div>
-                        <div class="emoji-container flex items-center">
-                            <i class="far fa-share-from-square emoji share text-green-500"></i>
-                            <span class="text ml-2">Chia sẻ</span>
-                        </div>
+                    </div>
+                    <div class="comment-section hidden w-full" id="commentSection7">
+                        <textarea class="w-full" placeholder="Viết bình luận của bạn"></textarea>
+                        <button onclick="postComment(7)" class="bg-yellow-400 text-black hover:bg-yellow-500 p-2 rounded font-bold">Gửi</button>
                     </div>
                 </div>
 
@@ -388,62 +363,82 @@
                     <div class="mt-2">
                         <a href="#">Ở Hà Nội có chỗ nào cho khách tour thư giãn, nghỉ ngơi trước khi ra sân bay không ạ? Kiểu massage chân, xông hơi, tăm sục, ăn nhẹ... gần khu sân bay hoặc đường ra Nôi bài càng tổt</a>
                     </div>
-                    <div class="reaction flex items-center mt-2">
-                        <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-heart emoji heart text-red-500"></i>
-                            <span class="text ml-2">0 Love</span>
-                        </div>
-                        <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-comments emoji comment text-blue-500"></i>
-                            <span class="text ml-2">0 Bình luận</span>
-                        </div>
-                        <div class="emoji-container flex items-center">
-                            <i class="far fa-share-from-square emoji share text-green-500"></i>
-                            <span class="text ml-2">Chia sẻ</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-4 mx-auto max-w-2xl bg-yellow-100 mt-2 mb-2 rounded-xl">
-                    <div class="flex items-center space-x-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_UIT_updated.svg" alt="Ảnh đại diện" class="w-10 h-10 rounded-full">
-                        <div>
-                            <a href="#">UIT</a>
-                        </div>
-                    </div>
-                    <div class="title-cmt mt-2 font-bold text-xl">
-                        <a href="#"> Địa điểm dừng chân cho khách tour</a>
-                    </div>
-                    <div class="mt-2">
-                        <a href="#">Ở Hà Nội có chỗ nào cho khách tour thư giãn, nghỉ ngơi trước khi ra sân bay không ạ? Kiểu massage chân, xông hơi, tăm sục, ăn nhẹ... gần khu sân bay hoặc đường ra Nôi bài càng tổt</a>
+                
+                    <div class="mt-2 flex flex-wrap ">
+                        <img src="https://h3jd9zjnmsobj.vcdn.cloud//public/qblog/images/2016/12/thuy_do_32/aac2b6d1144d208dfb0a83e48d147c44.jpg" alt="Hình ảnh 1" class="w-32 h-32 m-2">
+                        <img src="https://h3jd9zjnmsobj.vcdn.cloud//public/qblog/images/2016/12/thuy_do_32/f1fea262888ca067786056d88b57b6b4.jpg" alt="Hình ảnh 2" class="w-32 h-32 m-2">
+                        <img src="https://h3jd9zjnmsobj.vcdn.cloud//public/qblog/images/2016/12/thuy_do_32/358b0f218c0e5a4cdc5342710111e416.jpg" alt="Hình ảnh 3" class="w-32 h-32 m-2">
+                        <img src="https://h3jd9zjnmsobj.vcdn.cloud//public/qblog/images/2016/12/thuy_do_32/4d14f787899a7c52a501009cf5533fa8.jpg" alt="Hình ảnh 3" class="w-32 h-32 m-2">
+                        <img src="https://h3jd9zjnmsobj.vcdn.cloud//public/qblog/images/2016/12/thuy_do_32/aac2b6d1144d208dfb0a83e48d147c44.jpg" alt="Hình ảnh 3" class="w-32 h-32 m-2">
                     </div>
                     <div class="reaction flex items-center mt-2">
                         <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-heart emoji heart text-red-500"></i>
-                            <span class="text ml-2">0 Love</span>
-                        </div>
-                        <div class="emoji-container flex items-center mr-4">
-                            <i class="far fa-comments emoji comment text-blue-500"></i>
+                            <i class="far fa-comments emoji comment text-blue-500" id="commentBtn8"></i>
                             <span class="text ml-2">0 Bình luận</span>
                         </div>
-                        <div class="emoji-container flex items-center">
-                            <i class="far fa-share-from-square emoji share text-green-500"></i>
-                            <span class="text ml-2">Chia sẻ</span>
-                        </div>
+                    </div>
+                    <div class="comment-section hidden w-full" id="commentSection8">
+                        <textarea class="w-full" placeholder="Viết bình luận của bạn"></textarea>
+                        <button onclick="postComment(8)" class="bg-yellow-400 text-black hover:bg-yellow-500 p-2 rounded font-bold">Gửi</button>
                     </div>
                 </div>
 
+                <script>
+                    function postComment(commentId) {
+                        
+                        var commentSection = document.getElementById('commentSection' + commentId);
+            
+                        
+                        if (commentSection.style.display === 'block') {
+                            commentSection.style.display = 'none'; 
+                        } else {
+                            commentSection.style.display = 'block'; 
+                        }
+                    }
+            
+                  
+                    document.getElementById('commentBtn1').addEventListener('click', function () {
+                        postComment(1);
+                    });
+            
+                    document.getElementById('commentBtn2').addEventListener('click', function () {
+                        postComment(2);
+                    });
+
+                    document.getElementById('commentBtn3').addEventListener('click', function () {
+                        postComment(3);
+                    });
+
+                    document.getElementById('commentBtn4').addEventListener('click', function () {
+                        postComment(4);
+                    });
+
+                    document.getElementById('commentBtn5').addEventListener('click', function () {
+                        postComment(5);
+                    });
+
+                    document.getElementById('commentBtn6').addEventListener('click', function () {
+                        postComment(6);
+                    });
+
+                    document.getElementById('commentBtn7').addEventListener('click', function () {
+                        postComment(7);
+                    });
+
+                    document.getElementById('commentBtn8').addEventListener('click', function () {
+                        postComment(8);
+                    });
+                </script>
+            
+
+            
         </div>       
                 
                 
             
         </div>
    
-    
-    
-    
-    
-    
+       
     
 
         <footer class="footer bg-yellow-400 text-white">
